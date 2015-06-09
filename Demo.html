@@ -162,6 +162,20 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
+<td class="name"><a name="test_Loan">Loan</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td class="name"><a name="test_Demo">Demo</a></td>
 <td>[Template]</td>
 <td></td>
@@ -173,12 +187,12 @@ td.name, th.name {
 <td>Full Workflow Template</td>
 <td>0</td>
 <td>8</td>
-<td>0.01</td>
+<td>0.02</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>0.02</td>
+<td>0.03</td>
 <td>4</td>
 <td>3</td>
 </tr>
@@ -186,7 +200,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>2</td>
-<td>1</td>
+<td>2</td>
 <td></td>
 </tr>
 <tr>
@@ -219,17 +233,17 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>0</td>
-<td>8</td>
-<td>0.01</td>
-<td>0.02</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td class="name"></td>
-<td>...</td>
-<td>365</td>
-<td>100</td>
-<td>2</td>
+<td class="name"><a name="test_Return">Return</a></td>
+<td>${balance}=</td>
+<td>Evaluate</td>
+<td>8.38 - (3* 0.01) + (float(1) / 100)</td>
+<td></td>
 </tr>
 <tr>
 <td class="name"></td>
@@ -707,29 +721,29 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>${num}=</td>
+<td>${clicknum}=</td>
 <td>Convert To Number</td>
 <td>${num}</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>${num}=</td>
+<td>${clicknum}=</td>
 <td>Set Variable</td>
-<td>${num-1}</td>
+<td>${clicknum-1}</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>${num}=</td>
+<td>${clicknum}=</td>
 <td>Convert To Integer</td>
-<td>${num}</td>
+<td>${clicknum}</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>Repeat Keyword</td>
-<td>${num}</td>
+<td>${clicknum}</td>
 <td>Click Element</td>
 <td>//div[@class="opt-btn fi-right"]</td>
 </tr>
@@ -1513,6 +1527,27 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
+<td>Check Cattle QTY</td>
+<td>${before_cattle_qty}</td>
+<td>${after_cattle_qty}</td>
+<td>${num}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Check Total Price</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Check Profit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1562,16 +1597,54 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>${userpoint}=</td>
+<td>log</td>
+<td>${before_balance}${\n<br>
+}${num}${\n<br>
+}${list_price}${\n<br>
+}${credit}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${balance}=</td>
 <td>Evaluate</td>
-<td>${before_balance} - (${num} * ${list_price}) + ${credit}/100</td>
+<td>${before_balance} - (${num} * ${list_price}) + (float(${credit}) / 100)</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>Should Be Equal As Numbers</td>
-<td>${userpoint}</td>
+<td>${balance}</td>
 <td>${after_balance}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Check Cattle QTY">Check Cattle QTY</a></td>
+<td>[Arguments]</td>
+<td>${before_cattle_qty}</td>
+<td>${after_cattle_qty}</td>
+<td>${num}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${cattle_qty}=</td>
+<td>Evaluate</td>
+<td>${before_cattle_qty} + ${num}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Numbers</td>
+<td>${cattle_qty}</td>
+<td>${after_cattle_qty}</td>
 <td></td>
 </tr>
 <tr>
@@ -1674,6 +1747,13 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
+<td>Loan</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td>[Teardown]</td>
 <td>Close All Browsers</td>
 <td></td>
@@ -1739,6 +1819,300 @@ td.name, th.name {
 <td class="name"></td>
 <td>Sleep</td>
 <td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Admin Login">Admin Login</a></td>
+<td>Open Browser To URL</td>
+<td><a href="http://123.57.146.102/Access">http://123.57.146.102/Access</a></td>
+<td>1st</td>
+<td>#管理员</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>user_name</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>password</td>
+<td>123123</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>captcha</td>
+<td>ABCD</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Submit Form</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>项目管理</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Loan">Loan</a></td>
+<td>[Arguments]</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Admin Login</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Browser</td>
+<td>1st</td>
+<td>#管理员</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[contains(@onclick,"m_1-1")]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify Project Status</td>
+<td>${project_id}</td>
+<td>2</td>
+<td>#0开标1投标中2还款中3已还款4结束</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//div[@onclick="Project.loan('${project_id}')"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Element Is Visible</td>
+<td>//div[@id="md-info" and contains(text(),"积分为 ${credit} 积分")]</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//div[@onclick="Project.loan('${project_id}')"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${loan_status}=</td>
+<td>Get Text</td>
+<td>//td[a[@onclick="Project.changeStatus(this, '${project_id}')"]]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${loan_status}</td>
+<td>已放款 [修改]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_PayBack">PayBack</a></td>
+<td>[Arguments]</td>
+<td>${project_id}</td>
+<td>${user}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>//a[@onclick="Project.payBack('${project_id}')"]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>passWord_txt</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>passWord_txt</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>passWord</td>
+<td>877974</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${phonecode}=</td>
+<td>Get Vcode</td>
+<td>${user}</td>
+<td>wlmy123</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Browser</td>
+<td>2nd</td>
+<td>#普通用户</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>verifyCode</td>
+<td>${phonecode}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>comfirmPayBtn</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>15</td>
 <td></td>
 <td></td>
 </tr>
