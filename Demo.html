@@ -101,6 +101,13 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
+<td class="name">${project_id}</td>
+<td>219</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td class="name"></td>
 <td></td>
 <td></td>
@@ -163,8 +170,8 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"><a name="test_Loan">Loan</a></td>
-<td></td>
-<td></td>
+<td>Loan</td>
+<td>${project_id}</td>
 <td></td>
 <td></td>
 </tr>
@@ -176,7 +183,28 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
+<td class="name"><a name="test_PayBack">PayBack</a></td>
+<td>PayBack</td>
+<td>219</td>
+<td>yiniuwang1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td class="name"><a name="test_Demo">Demo</a></td>
+<td>[Tags]</td>
+<td>stable</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td>[Template]</td>
 <td></td>
 <td></td>
@@ -212,6 +240,13 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"><a name="test_Data Driven Test Build Project">Data Driven Test Build Project</a></td>
+<td>[Tags]</td>
+<td>stable</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td>[Template]</td>
 <td>Build Project Template</td>
 <td></td>
@@ -230,20 +265,6 @@ td.name, th.name {
 <td>4</td>
 <td>3</td>
 <td>2</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"><a name="test_Return">Return</a></td>
-<td>${balance}=</td>
-<td>Evaluate</td>
-<td>8.38 - (3* 0.01) + (float(1) / 100)</td>
-<td></td>
 </tr>
 <tr>
 <td class="name"></td>
@@ -541,7 +562,7 @@ td.name, th.name {
 <td class="name"><a name="keyword_Modify Project Status">Modify Project Status</a></td>
 <td>[Arguments]</td>
 <td>${project_id}</td>
-<td>${status}</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -555,7 +576,14 @@ td.name, th.name {
 <td class="name"></td>
 <td>Wait And Run Keyword</td>
 <td>Click ELement</td>
-<td>//a[@onclick="Project.changeStatus(this, '${project_id}')"]</td>
+<td>//a[@onclick="window.top.Navigation.page('a=Project/detail/${project_id}&amp;fm=Project/manage&amp;fn=业务操作');"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>//input[@onclick="Project.open('${project_id}')"]</td>
 <td></td>
 </tr>
 <tr>
@@ -568,15 +596,22 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>Wait And Run Keyword</td>
-<td>Select From List By Value</td>
-<td>//select[@id="ct-status"]</td>
-<td>${status}</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>8</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>Wait And Run Keyword</td>
-<td>Click ELement</td>
-<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td>Click Element</td>
+<td>//a[contains(@onclick,"m_1-1")]</td>
 <td></td>
 </tr>
 <tr>
@@ -806,7 +841,7 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>${phonecode}=</td>
-<td>Get Vcode</td>
+<td>Get Vcode User</td>
 <td>${user}</td>
 <td>wlmy123</td>
 </tr>
@@ -867,7 +902,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="keyword_Get Vcode">Get Vcode</a></td>
+<td class="name"><a name="keyword_Get Vcode User">Get Vcode User</a></td>
 <td>[Arguments]</td>
 <td>${user}</td>
 <td>${passwd}</td>
@@ -2048,7 +2083,77 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>//a[@onclick="Project.payBack('${project_id}')"]</td>
+<td>Open Browser To URL</td>
+<td><a href="http://123.57.146.102/User/login/1">http://123.57.146.102/User/login/1</a></td>
+<td>4th</td>
+<td>#牧场账户</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>user_name</td>
+<td>wangy</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>password</td>
+<td>hong81</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>captcha</td>
+<td>ABCD</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Submit Form</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>欢迎您回来</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@href="/User/center"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@url="/User/project"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select Frame</td>
+<td>mFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>//td[a[@onclick="Project.payBack('${project_id}')"]]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
 <td></td>
 <td></td>
 <td></td>
@@ -2084,15 +2189,15 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>${phonecode}=</td>
-<td>Get Vcode</td>
+<td>Get Vcode Farm</td>
 <td>${user}</td>
 <td>wlmy123</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>Switch Browser</td>
-<td>2nd</td>
-<td>#普通用户</td>
+<td>4th</td>
+<td>#牧场账户</td>
 <td></td>
 </tr>
 <tr>
@@ -2113,6 +2218,181 @@ td.name, th.name {
 <td class="name"></td>
 <td>Sleep</td>
 <td>15</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get Vcode Farm">Get Vcode Farm</a></td>
+<td>[Arguments]</td>
+<td>${user}</td>
+<td>${passwd}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Open Browser To URL</td>
+<td><a href="http://www.lanrensms.com:38080/mvc/index">http://www.lanrensms.com:38080/mvc/index</a></td>
+<td>5th</td>
+<td>#验证码</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@href="/r/login.html"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>j_username</td>
+<td>${user}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>j_password</td>
+<td>${passwd}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Submit Form</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>xpath=(//td[contains(text(),"验证码")])[1]</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${line}=</td>
+<td>Get Text</td>
+<td>xpath=(//td[contains(text(),"验证码")])[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${old_code}=</td>
+<td>Get Substring</td>
+<td>${line}</td>
+<td>3</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Browser</td>
+<td>4th</td>
+<td>#牧场用户</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>//input[@id="btn"]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>60</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Browser</td>
+<td>5th</td>
+<td>#验证码</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Reload Page</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>xpath=(//td[contains(text(),"验证码")])[1]</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${line}=</td>
+<td>Get Text</td>
+<td>xpath=(//td[contains(text(),"验证码")])[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${new_code}=</td>
+<td>Get Substring</td>
+<td>${line}</td>
+<td>3</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${result} =</td>
+<td>Run Keyword If</td>
+<td>"${old_code}" != "${new_code}"</td>
+<td>Set Variable</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${new_code}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${result}</td>
 <td></td>
 <td></td>
 </tr>
