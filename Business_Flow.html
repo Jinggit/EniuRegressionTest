@@ -1,0 +1,676 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>Business Flow</title>
+</head>
+<body>
+<h1>Business Flow</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Suite Teardown</td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Selenium2Library</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>DatabaseLibrary</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td>all_pages_resource.html</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="variable">
+<tr>
+<th class="name" colspan="5">Variables</th>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="testcase">
+<tr>
+<th class="name" colspan="5">Test Cases</th>
+</tr>
+<tr>
+<td class="name"><a name="test_Build Project">Build Project</a></td>
+<td>[Setup]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Build Project Template</td>
+<td>0</td>
+<td>8</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0.02</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Buy Cattle">Buy Cattle</a></td>
+<td>Buy Cattle</td>
+<td>1</td>
+<td>0</td>
+<td>yiniuwang</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Loan">Loan</a></td>
+<td>Loan</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_PayBack">PayBack</a></td>
+<td>PayBack</td>
+<td>219</td>
+<td>yiniuwang1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Repay">Repay</a></td>
+<td>Repay</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Demo">Demo</a></td>
+<td>[Tags]</td>
+<td>stable</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Template]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${before_farm_balance}=</td>
+<td>Replace String</td>
+<td>"9.23"</td>
+<td>"</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Data Driven Test Build Project">Data Driven Test Build Project</a></td>
+<td>[Tags]</td>
+<td>stable</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Template]</td>
+<td>Build Project Template</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>0</td>
+<td>8</td>
+<td>0.01</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Data Driven Test Workflow">Data Driven Test Workflow</a></td>
+<td>[Template]</td>
+<td>Full Workflow Template</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>0</td>
+<td>8</td>
+<td>0.01</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>0</td>
+<td>8</td>
+<td>0.01</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>3</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>0</td>
+<td>8</td>
+<td>0.01</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>0</td>
+<td>8</td>
+<td>0.01</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>0</td>
+<td>8</td>
+<td>0.01</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>3</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Data Driven Test Workflow Failure">Data Driven Test Workflow Failure</a></td>
+<td>[Template]</td>
+<td>Full Workflow Template</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>0</td>
+<td>8</td>
+<td>0.01</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keywords</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Build Project Template">Build Project Template</a></td>
+<td>[Arguments]</td>
+<td>${type}</td>
+<td>${farm_id}</td>
+<td>${list_price}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${buyout_price}</td>
+<td>${duration}</td>
+<td>${cattle_qty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${afternow}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${project_id}=</td>
+<td>Add Project</td>
+<td>${type}</td>
+<td>${farm_id}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${list_price}</td>
+<td>${buyout_price}</td>
+<td>${duration}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${cattle_qty}</td>
+<td>${afternow}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify Project Status</td>
+<td>${project_id}</td>
+<td>open</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Full Workflow Template">Full Workflow Template</a></td>
+<td>[Arguments]</td>
+<td>${type}</td>
+<td>${farm_id}</td>
+<td>${list_price}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${buyout_price}</td>
+<td>${duration}</td>
+<td>${cattle_qty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${afternow}</td>
+<td>${num}</td>
+<td>${credit}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>品种${type}${\n<br>
+}农场ID${farm_id}${\n<br>
+}挂牌价${list_price}${\n<br>
+}收购价${buyout_price}${\n<br>
+}周期${duration}${\n<br>
+}头数${cattle_qty}${\n<br>
+}几天后截至${afternow}${\n<br>
+}购买牛只${num}${\n<br>
+}信用支付${credit}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${project_id}=</td>
+<td>Add Project</td>
+<td>${type}</td>
+<td>${farm_id}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${list_price}</td>
+<td>${buyout_price}</td>
+<td>${duration}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${cattle_qty}</td>
+<td>${afternow}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Project Process</td>
+<td>${project_id}</td>
+<td>初始</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify Project Status</td>
+<td>${project_id}</td>
+<td>open</td>
+<td>#open投标close结束投标loan进行中3已还款4结束</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Project Process</td>
+<td>${project_id}</td>
+<td>投标中</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Buy Cattle</td>
+<td>${num}</td>
+<td>${credit}</td>
+<td>yiniuwang</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Browser</td>
+<td>1st</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${cattle_qty}' != '${num}'</td>
+<td>Modify Project Status</td>
+<td>${project_id}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>close</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${cattle_qty}' != '${num}'</td>
+<td>Check Project Process</td>
+<td>${project_id}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>进行中</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Loan</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Project Process</td>
+<td>${project_id}</td>
+<td>结算中</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>PayBack</td>
+<td>${project_id}</td>
+<td>yiniuwang1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Repay</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Project Process</td>
+<td>${project_id}</td>
+<td>结束</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Suite Variable</td>
+<td>${project_id}</td>
+<td>${project_id}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>

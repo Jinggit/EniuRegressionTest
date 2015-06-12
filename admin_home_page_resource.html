@@ -1,0 +1,1250 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>Admin Home Page Resource</title>
+</head>
+<body>
+<h1>Admin Home Page Resource</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Selenium2Library</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td>public_keyword_resource.html</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keywords</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Repay">Repay</a></td>
+<td>[Arguments]</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Browser</td>
+<td>1st</td>
+<td>#管理员</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[contains(@onclick,"m_1-1")]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>//a[@onclick="window.top.Navigation.page('a=Project/detail/${project_id}&amp;fm=Project/manage&amp;fn=业务操作');"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//input[@onclick="Project.repay('${project_id}')"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[contains(@onclick,"m_1-1")]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${loan_status}=</td>
+<td>Get Text</td>
+<td>//tr[@aid="${project_id}"]/td[12]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${loan_status}</td>
+<td>结束</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Check Project Process">Check Project Process</a></td>
+<td>[Arguments]</td>
+<td>${project_id}</td>
+<td>${status}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[contains(@onclick,"m_1-1")]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>//a[@onclick="window.top.Navigation.page('a=Project/detail/${project_id}&amp;fm=Project/manage&amp;fn=业务操作');"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>${status}</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[contains(@onclick,"m_1-1")]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Loan Credit Exchange">Loan Credit Exchange</a></td>
+<td>${status}=</td>
+<td>Evaluate</td>
+<td>(${list_price} * ${num}) &lt;= (${credit} * 0.01)</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${status}' == 'True'</td>
+<td>Wait Until Element Is Visible</td>
+<td>//div[@id="md-info" and contains(text(),"有 ${num} 积分")]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TIMEOUT}</td>
+<td>ELSE</td>
+<td>Wait Until Element Is Visible</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>//div[@id="md-info" and contains(text(),"有 ${credit} 积分")]</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Loan">Loan</a></td>
+<td>[Arguments]</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Admin Login</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Browser</td>
+<td>1st</td>
+<td>#管理员</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${before_eniu_balance}=</td>
+<td>Validation Before Loan</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[contains(@onclick,"m_1-1")]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Modify Project Status</td>
+<td>${project_id}</td>
+<td>loan</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>//a[@onclick="window.top.Navigation.page('a=Project/detail/${project_id}&amp;fm=Project/manage&amp;fn=业务操作');"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//input[@onclick="Project.loan('${project_id}')"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${credit}' != '0'</td>
+<td>Loan Credit Exchange</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${credit}' != '0'</td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>mainFrame</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${credit}' != '0'</td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>//input[@onclick="Project.loan('${project_id}')"]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${credit}' != '0'</td>
+<td>Unselect Frame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${credit}' != '0'</td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[contains(@onclick,"m_1-1")]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${loan_status}=</td>
+<td>Get Text</td>
+<td>//tr[@aid="${project_id}"]/td[12]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${loan_status}</td>
+<td>已放款</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Validation After Loan</td>
+<td>${before_eniu_balance}</td>
+<td>${num}</td>
+<td>${credit}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${list_price}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Admin Login">Admin Login</a></td>
+<td>Open Browser To URL</td>
+<td><a href="http://123.57.146.102/Access">http://123.57.146.102/Access</a></td>
+<td>1st</td>
+<td>#管理员</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>user_name</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>password</td>
+<td>123123</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>captcha</td>
+<td>ABCD</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Submit Form</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>项目管理</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Extract Project ID">Extract Project ID</a></td>
+<td>[Arguments]</td>
+<td>${projectname}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[contains(@onclick,"m_1-1")]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>//tr[td[text()="${projectname}"]]/td[1]/input</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${project_id}=</td>
+<td>Get Value</td>
+<td>//tr[td[text()="${projectname}"]]/td[1]/input</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Gen Cattle SN">Gen Cattle SN</a></td>
+<td>[Arguments]</td>
+<td>${qty}</td>
+<td>${pre}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Suite Variable</td>
+<td>${cattle_sn}</td>
+<td>${EMPTY}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>: FOR</td>
+<td>${index}</td>
+<td>IN RANGE</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${qty}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>${yyyy}</td>
+<td>${mm}</td>
+<td>${dd}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>...</td>
+<td>${hh}</td>
+<td>${min}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>...</td>
+<td>${ss}=</td>
+<td>Get Time</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>...</td>
+<td>year,month,day,hour, min, sec</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>${sn}=</td>
+<td>Set Variable</td>
+<td>${pre}${index}${yyyy}${mm}${dd}${hh}${min}${ss}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>${sn}=</td>
+<td>Catenate</td>
+<td>${cattle_sn}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>...</td>
+<td>${sn}${\n<br>
+}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>${cattle_sn}=</td>
+<td>Set Variable</td>
+<td>${sn}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${cattle_sn}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Modify Project Status">Modify Project Status</a></td>
+<td>[Arguments]</td>
+<td>${project_id}</td>
+<td>${status}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>//a[@onclick="window.top.Navigation.page('a=Project/detail/${project_id}&amp;fm=Project/manage&amp;fn=业务操作');"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>//input[@onclick="Project.${status}('${project_id}')"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>15</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[contains(@onclick,"m_1-1")]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Add Project">Add Project</a></td>
+<td>[Arguments]</td>
+<td>${type}</td>
+<td>${farm_id}</td>
+<td>${list_price}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${buyout_price}</td>
+<td>${duration}</td>
+<td>${cattle_qty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${afternow}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Open Browser To URL</td>
+<td><a href="http://123.57.146.102/Access">http://123.57.146.102/Access</a></td>
+<td>1st</td>
+<td>#管理员</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>user_name</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>password</td>
+<td>123123</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>captcha</td>
+<td>ABCD</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Submit Form</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>项目管理</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[contains(@onclick,"m_1-0")]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${yyyy}</td>
+<td>${mm}</td>
+<td>${dd}</td>
+<td>${hh}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${min}</td>
+<td>${ss}=</td>
+<td>Get Time</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>year,month,day,hour, min, sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${projectname}=</td>
+<td>Set Variable</td>
+<td>蒙特利尔${yyyy}${mm}${dd}${hh}${min}${ss}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>project_name</td>
+<td>${projectname}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select From List By Value</td>
+<td>type</td>
+<td>${type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select From List By Value</td>
+<td>farm_id</td>
+<td>${farm_id}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>list_price</td>
+<td>${list_price}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>buyout_price</td>
+<td>${buyout_price}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${date_line}=</td>
+<td>Get Date</td>
+<td>${afternow}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${num}=</td>
+<td>Convert To Number</td>
+<td>${afternow}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${num}=</td>
+<td>Set Variable</td>
+<td>${num+1}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${in_date}=</td>
+<td>Get Date</td>
+<td>${num}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${num}=</td>
+<td>Convert To Integer</td>
+<td>${num}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${duration}</td>
+<td>Convert To Integer</td>
+<td>${duration}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${duration}</td>
+<td>Evaluate</td>
+<td>${duration}+${num}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${outdate}=</td>
+<td>Get Date</td>
+<td>${duration}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>in_date</td>
+<td>${in_date}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>out_date</td>
+<td>${outdate}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${cattle_sn}=</td>
+<td>Gen Cattle SN</td>
+<td>${cattle_qty}</td>
+<td>QA</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>cattle_sn</td>
+<td>${cattle_sn}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>date_line</td>
+<td>${date_line}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Submit Form</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Element Is Visible</td>
+<td>//td[contains(text(),"添加成功")]</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>//button[span[contains(text(),"确定")]]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${project_id}=</td>
+<td>Extract Project ID</td>
+<td>${projectname}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Validation Before Loan">Validation Before Loan</a></td>
+<td>${before_eniu_balance}=</td>
+<td>Get Eniu Balance</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${before_eniu_balance}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Validation After Loan">Validation After Loan</a></td>
+<td>[Arguments]</td>
+<td>${before_eniu_balance}</td>
+<td>${num}</td>
+<td>${credit}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${list_price}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${after_eniu_balance}=</td>
+<td>Get Eniu Balance</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Eniu Balance</td>
+<td>${before_eniu_balance}</td>
+<td>${after_eniu_balance}</td>
+<td>${num}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${credit}</td>
+<td>${list_price}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get Eniu Balance">Get Eniu Balance</a></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//span[text()="系统管理"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//span[text()="积分配置"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mainFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>当前余额</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${before_eniu_balance}=</td>
+<td>Get Text</td>
+<td>//td[@class="formTd"]/div[@class="fl"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${before_eniu_balance}=</td>
+<td>Get Substring</td>
+<td>${before_eniu_balance}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>-2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//span[text()="项目管理"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${before_eniu_balance}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Check Eniu Balance">Check Eniu Balance</a></td>
+<td>[Arguments]</td>
+<td>${before_eniu_balance}</td>
+<td>${after_eniu_balance}</td>
+<td>${num}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${credit}</td>
+<td>${list_price}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>log</td>
+<td>${before_eniu_balance}${\n<br>
+}${num}${\n<br>
+}${list_price}${\n<br>
+}${credit}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status}=</td>
+<td>Evaluate</td>
+<td>(${list_price} * ${num}) &lt;= (${credit} * 0.01)</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${balance}=</td>
+<td>Run Keyword If</td>
+<td>'${status}' == 'True'</td>
+<td>Evaluate</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${before_eniu_balance} - (float(${num}) / 100)</td>
+<td>ELSE</td>
+<td>Evaluate</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${before_eniu_balance} - \ (float(${credit}) / 100)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Numbers</td>
+<td>${balance}</td>
+<td>${after_eniu_balance}</td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>

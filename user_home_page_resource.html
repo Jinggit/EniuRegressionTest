@@ -1,0 +1,892 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>User Home Page Resource</title>
+</head>
+<body>
+<h1>User Home Page Resource</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Selenium2Library</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td>public_keyword_resource.html</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keywords</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Buy Cattle">Buy Cattle</a></td>
+<td>[Arguments]</td>
+<td>${num}</td>
+<td>${credit}</td>
+<td>${user}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Open Browser To URL</td>
+<td><a href="http://123.57.146.102/User/login">http://123.57.146.102/User/login</a></td>
+<td>2nd</td>
+<td>#普通用户</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>user_name</td>
+<td>lhong</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>password</td>
+<td>hong81</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>captcha</td>
+<td>ABCD</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Submit Form</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>欢迎您回来</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${before_balance}</td>
+<td>${before_cattle_qty}</td>
+<td>${before_total_price}</td>
+<td>${before_profit}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${before_userpoint}=</td>
+<td>Validation Before Buying</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@href="/Project/search"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@href="/Project/view/${project_id}"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${clicknum}=</td>
+<td>Convert To Number</td>
+<td>${num}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${clicknum}=</td>
+<td>Set Variable</td>
+<td>${clicknum-1}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${clicknum}=</td>
+<td>Convert To Integer</td>
+<td>${clicknum}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Repeat Keyword</td>
+<td>${clicknum}</td>
+<td>Click Element</td>
+<td>//div[@class="opt-btn fi-right"]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@onclick="Eniu.order.send(this)"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>contract1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>contract2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>deduction</td>
+<td>${credit}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@onclick="Eniu.order.commit()"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>${total_credit}=</td>
+<td>Evaluate</td>
+<td>${num} * ${list_price}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>${total}=</td>
+<td>Evaluate</td>
+<td>${credit} * 0.01</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status}=</td>
+<td>Evaluate</td>
+<td>(${list_price} * ${num}) &lt;= (${credit} * 0.01)</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${status}' == 'True'</td>
+<td>Log</td>
+<td>Full Credit Payment</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ELSE</td>
+<td>Upay</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>15</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Validation After Buying</td>
+<td>${before_balance}</td>
+<td>${before_cattle_qty}</td>
+<td>${before_total_price}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${before_profit}</td>
+<td>${before_userpoint}</td>
+<td>${num}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${credit}</td>
+<td>${list_price}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get Vcode User">Get Vcode User</a></td>
+<td>[Arguments]</td>
+<td>${user}</td>
+<td>${passwd}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Open Browser To URL</td>
+<td><a href="http://www.lanrensms.com:38080/mvc/index">http://www.lanrensms.com:38080/mvc/index</a></td>
+<td>3rd</td>
+<td>#验证码</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@href="/r/login.html"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>j_username</td>
+<td>${user}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>j_password</td>
+<td>${passwd}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Submit Form</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>xpath=(//td[contains(text(),"验证码")])[1]</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${line}=</td>
+<td>Get Text</td>
+<td>xpath=(//td[contains(text(),"验证码")])[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${old_code}=</td>
+<td>Get Substring</td>
+<td>${line}</td>
+<td>3</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Browser</td>
+<td>2nd</td>
+<td>#普通用户</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>//input[@id="btn"]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Browser</td>
+<td>3rd</td>
+<td>#验证码</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Reload Page</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>xpath=(//td[contains(text(),"验证码")])[1]</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${line}=</td>
+<td>Get Text</td>
+<td>xpath=(//td[contains(text(),"验证码")])[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${new_code}=</td>
+<td>Get Substring</td>
+<td>${line}</td>
+<td>3</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${result} =</td>
+<td>Run Keyword If</td>
+<td>"${old_code}" != "${new_code}"</td>
+<td>Set Variable</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${new_code}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${result}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Validation Before Buying">Validation Before Buying</a></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@href="/User/center"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>账户总览</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${before_cattle_qty}=</td>
+<td>Get Text</td>
+<td>//div[@class="value i-cattle"]/span</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${before_total_price}=</td>
+<td>Get Text</td>
+<td>//div[@class="value i-profit"]/span</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${before_profit}=</td>
+<td>Get Text</td>
+<td>//div[@class="value i-money og"]/span</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${before_balance}=</td>
+<td>Get Text</td>
+<td>//div[@class="value i-money"]/span</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@url="/Point/userPoints"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>剩余积分</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${before_userpoint}=</td>
+<td>Get Text</td>
+<td>//div[@class="user-main"]/div/span</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${before_balance}</td>
+<td>${before_cattle_qty}</td>
+<td>${before_total_price}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${before_profit}</td>
+<td>${before_userpoint}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Validation After Buying">Validation After Buying</a></td>
+<td>[Arguments]</td>
+<td>${before_balance}</td>
+<td>${before_cattle_qty}</td>
+<td>${before_total_price}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${before_profit}</td>
+<td>${before_userpoint}</td>
+<td>${num}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${credit}</td>
+<td>${list_price}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Browser</td>
+<td>2nd</td>
+<td>#普通用户</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@href="/User/center"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>账户总览</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${after_cattle_qty}=</td>
+<td>Get Text</td>
+<td>//div[@class="value i-cattle"]/span</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${after_total_price}=</td>
+<td>Get Text</td>
+<td>//div[@class="value i-profit"]/span</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${after_profit}=</td>
+<td>Get Text</td>
+<td>//div[@class="value i-money og"]/span</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${after_balance}=</td>
+<td>Get Text</td>
+<td>//div[@class="value i-money"]/span</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@url="/Point/userPoints"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select frame</td>
+<td>mFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>剩余积分</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${after_userpoint}=</td>
+<td>Get Text</td>
+<td>//div[@class="user-main"]/div/span</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Userpoint</td>
+<td>${before_userpoint}</td>
+<td>${after_userpoint}</td>
+<td>${credit}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Balance</td>
+<td>${before_balance}</td>
+<td>${after_balance}</td>
+<td>${num}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${credit}</td>
+<td>${list_price}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Cattle QTY</td>
+<td>${before_cattle_qty}</td>
+<td>${after_cattle_qty}</td>
+<td>${num}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Check Total Price</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Check Profit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Check Userpoint">Check Userpoint</a></td>
+<td>[Arguments]</td>
+<td>${before_userpoint}</td>
+<td>${after_userpoint}</td>
+<td>${credit}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status}=</td>
+<td>Evaluate</td>
+<td>(${list_price} * ${num}) &lt;= (${credit} * 0.01)</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${userpoint}=</td>
+<td>Run Keyword If</td>
+<td>'${status}' == 'True'</td>
+<td>Evaluate</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${before_userpoint} - ${num}</td>
+<td>ELSE</td>
+<td>Evaluate</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${before_userpoint} - ${credit}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Numbers</td>
+<td>${userpoint}</td>
+<td>${after_userpoint}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Check Balance">Check Balance</a></td>
+<td>[Arguments]</td>
+<td>${before_balance}</td>
+<td>${after_balance}</td>
+<td>${num}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${credit}</td>
+<td>${list_price}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>log</td>
+<td>${before_balance}${\n<br>
+}${num}${\n<br>
+}${list_price}${\n<br>
+}${credit}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status}=</td>
+<td>Evaluate</td>
+<td>(${list_price} * ${num}) &lt;= (${credit} * 0.01)</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${balance}=</td>
+<td>Run Keyword If</td>
+<td>'${status}' == 'True'</td>
+<td>Evaluate</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${before_balance} - (${num} * ${list_price}) + (float(${num}) / 100)</td>
+<td>ELSE</td>
+<td>Evaluate</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${before_balance} - (${num} * ${list_price}) + (float(${credit}) / 100)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Numbers</td>
+<td>${balance}</td>
+<td>${after_balance}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Check Cattle QTY">Check Cattle QTY</a></td>
+<td>[Arguments]</td>
+<td>${before_cattle_qty}</td>
+<td>${after_cattle_qty}</td>
+<td>${num}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${cattle_qty}=</td>
+<td>Evaluate</td>
+<td>${before_cattle_qty} + ${num}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal As Numbers</td>
+<td>${cattle_qty}</td>
+<td>${after_cattle_qty}</td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>
