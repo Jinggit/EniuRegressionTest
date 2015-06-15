@@ -901,10 +901,31 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${type}' == '0'</td>
 <td>Wait And Run Keyword</td>
 <td>Input Text</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
 <td>buyout_price</td>
 <td>${buyout_price}</td>
+<td>ELSE IF</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>'${type}' == '1'</td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>profit</td>
+<td>${buyout_price}</td>
+<td></td>
 </tr>
 <tr>
 <td class="name"></td>
@@ -950,7 +971,7 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>${duration}</td>
+<td>${duration_after_cal}=</td>
 <td>Evaluate</td>
 <td>${duration}+${num}</td>
 <td></td>
@@ -958,7 +979,21 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>${outdate}=</td>
+<td>Run Keyword If</td>
+<td>'${type}' == '0'</td>
 <td>Get Date</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${duration_after_cal}</td>
+<td>ELSE IF</td>
+<td>'${type}' == '1'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Set Variable</td>
 <td>${duration}</td>
 <td></td>
 </tr>
@@ -971,10 +1006,31 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${type}' == '0'</td>
 <td>Wait And Run Keyword</td>
 <td>Input Text</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
 <td>out_date</td>
 <td>${outdate}</td>
+<td>ELSE IF</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>'${type}' == '1'</td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>periods</td>
+<td>${outdate}</td>
+<td></td>
 </tr>
 <tr>
 <td class="name"></td>

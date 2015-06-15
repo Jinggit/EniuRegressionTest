@@ -348,7 +348,7 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>Sleep</td>
-<td>20</td>
+<td>${GETCODEWAITTIME}</td>
 <td></td>
 <td></td>
 </tr>
@@ -468,7 +468,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>${balance}=</td>
 <td>Evaluate</td>
-<td>${before_farm_balance} - \ (${num} * ${list_price})</td>
+<td>${before_farm_balance} - \ (${num} * ${buyout_price})</td>
 <td></td>
 </tr>
 <tr>
@@ -487,6 +487,13 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"><a name="keyword_Get Farm Balance">Get Farm Balance</a></td>
+<td>Sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td>Wait And Run Keyword</td>
 <td>Click Element</td>
 <td>//a[@href="/User/center"]</td>
@@ -501,16 +508,16 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name"></td>
-<td>${before_farm_balance}=</td>
+<td>${farm_balance}=</td>
 <td>Get Text</td>
 <td>//span[@class="ub-money"]</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>${before_farm_balance}=</td>
+<td>${farm_balance}=</td>
 <td>Replace String</td>
-<td>${before_farm_balance}</td>
+<td>${farm_balance}</td>
 <td>￥</td>
 </tr>
 <tr>
@@ -523,7 +530,7 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>[Return]</td>
-<td>${before_farm_balance}</td>
+<td>${farm_balance}</td>
 <td></td>
 <td></td>
 </tr>
