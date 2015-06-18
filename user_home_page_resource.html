@@ -153,8 +153,29 @@ td.name, th.name {
 <td class="name"></td>
 <td>Wait And Run Keyword</td>
 <td>Click Element</td>
-<td>//a[@href="/Project/search"]</td>
+<td>//div[@class="menu"]/a[@href="/Project/search"]</td>
 <td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${type}' == '0'</td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>//div[@class="btns"]/a[@href="/Project/search"]</td>
+<td>ELSE IF</td>
+<td>'${type}' == '1'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//div[@class="btns"]/a[@href="/Project/search?type=1"]</td>
 </tr>
 <tr>
 <td class="name"></td>

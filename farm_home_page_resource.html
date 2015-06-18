@@ -87,7 +87,7 @@ td.name, th.name {
 <th class="name" colspan="5">Keywords</th>
 </tr>
 <tr>
-<td class="name"><a name="keyword_PayBack">PayBack</a></td>
+<td class="name"><a name="keyword_Beef PayBack">Beef PayBack</a></td>
 <td>[Arguments]</td>
 <td>${project_id}</td>
 <td>${user}</td>
@@ -467,8 +467,22 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>${balance}=</td>
+<td>Run Keyword If</td>
+<td>'${type}' == '0'</td>
 <td>Evaluate</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
 <td>${before_farm_balance} - \ (${num} * ${buyout_price})</td>
+<td>ELSE IF</td>
+<td>'${type}' == '1'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Evaluate</td>
+<td>${before_farm_balance} - \ (${num} * ${rent})</td>
 <td></td>
 </tr>
 <tr>
@@ -531,6 +545,174 @@ td.name, th.name {
 <td class="name"></td>
 <td>[Return]</td>
 <td>${farm_balance}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Cow PayBack">Cow PayBack</a></td>
+<td>[Arguments]</td>
+<td>${project_id}</td>
+<td>${user}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Open Browser To URL</td>
+<td><a href="http://123.57.146.102/User/login/1">http://123.57.146.102/User/login/1</a></td>
+<td>4th</td>
+<td>#牧场账户</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>user_name</td>
+<td>wangy</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>password</td>
+<td>hong81</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>captcha</td>
+<td>ABCD</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Submit Form</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains</td>
+<td>欢迎您回来</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${before_farm_balance}=</td>
+<td>Validation Before Payback</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@href="/User/center"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>//a[@url="/User/project"]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Select Frame</td>
+<td>mFrame</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>//td[a[@onclick="Project.payBack('${project_id}')"]]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Unselect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click ELement</td>
+<td>xpath=(//div[@class="mdb-c"])[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>passWord_txt</td>
+<td>${TIMEOUT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>passWord_txt</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>passWord</td>
+<td>877974</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${phonecode}=</td>
+<td>Get Vcode Farm</td>
+<td>${user}</td>
+<td>wlmy123</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Browser</td>
+<td>4th</td>
+<td>#牧场账户</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Input Text</td>
+<td>verifyCode</td>
+<td>${phonecode}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait And Run Keyword</td>
+<td>Click Element</td>
+<td>comfirmPayBtn</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>15</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Validation After Payback</td>
+<td>${before_farm_balance}</td>
 <td></td>
 <td></td>
 </tr>

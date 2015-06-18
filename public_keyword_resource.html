@@ -75,6 +75,13 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
+<td class="name">Library</td>
+<td>SSHLibrary</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td class="name"></td>
 <td></td>
 <td></td>
@@ -244,6 +251,153 @@ td.name, th.name {
 <td class="name"></td>
 <td>[Return]</td>
 <td>${now}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Login Web Server">Login Web Server</a></td>
+<td>[Arguments]</td>
+<td>${ip}</td>
+<td>${timeout}</td>
+<td>${user}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${password}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Open Connection</td>
+<td>${ip}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Client Configuration</td>
+<td>timeout=${timeout}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Client Configuration</td>
+<td>prompt=${PROMPT}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SSHLibrary.Login</td>
+<td>${user}</td>
+<td>${password}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Read Until Regexp</td>
+<td>${PROMPT_REG}</td>
+<td>INFO</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>log</td>
+<td>Login Successfully!</td>
+<td>INFO</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Change Createdtime">Change Createdtime</a></td>
+<td>[Arguments]</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login Web Server</td>
+<td>@{SERVER_ACCOUNT}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SSHLibrary.Write</td>
+<td>php ./autoqa/change_created_time.php ${project_id}</td>
+<td>INFO</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Read Until</td>
+<td>Record updated successfully</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get Rent Value">Get Rent Value</a></td>
+<td>[Arguments]</td>
+<td>${project_id}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login Web Server</td>
+<td>@{SERVER_ACCOUNT}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${rent_value}=</td>
+<td>Execute Command</td>
+<td>php ./autoqa/get_rent_value.php ${project_id}</td>
+<td>INFO</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${rent_value}</td>
 <td></td>
 <td></td>
 </tr>
